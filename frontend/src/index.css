@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap');
+
+:root {
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --accent-glow: rgba(167, 139, 250, 0.5); /* A soft violet glow */
+  --border-color: rgba(255, 255, 255, 0.1);
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  background-color: #0B0B23; /* Dark blue/purple base */
+  color: var(--text-primary);
+  min-height: 100vh;
+}
+
+/* --- Header Styling (NEW) --- */
+.header-modern {
+  background: rgba(15, 15, 35, 0.5); /* Semi-transparent dark blue */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border-color);
+  padding: 0.5rem 0;
+  position: relative; /* Add position relative */
+  z-index: 100;       /* This is the crucial line to add */
+}
+
+.header-modern .navbar-brand {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--text-primary);
+}
+
+.header-modern .nav-link {
+  color: var(--text-secondary);
+  font-weight: 500;
+  transition: color 0.2s ease-in-out;
+}
+
+.header-modern .nav-link:hover {
+  color: var(--text-primary);
+}
+
+.dropdown-menu-modern {
+    background: rgba(25, 25, 50, 0.8) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 8px !important;
+}
+
+.dropdown-menu-modern .dropdown-item {
+    color: var(--text-secondary) !important;
+}
+
+.dropdown-menu-modern .dropdown-item:hover {
+    background-color: var(--accent-glow) !important;
+    color: var(--text-primary) !important;
+}
+
+
+/* --- Book Card Styling --- */
+.book-card-modern {
+  background: rgba(25, 25, 50, 0.5);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.book-card-modern:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2), 0 0 30px var(--accent-glow);
+}
+
+.book-card-modern .card-img-top {
+    transition: transform 0.3s ease;
+}
+
+.book-card-modern:hover .card-img-top {
+    transform: scale(1.1);
+}
+
+/* Hero Section Styling */
+.hero-section {
+  position: relative;
+  padding: 6rem 2rem;
+  text-align: center;
+  border-radius: 16px;
+  overflow: hidden;
+  background: transparent;
+  border: 1px solid var(--border-color);
+  margin: 1rem;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150%;
+  height: 150%;
+  background: radial-gradient(circle at center, rgba(167, 139, 250, 0.2), rgba(129, 140, 248, 0.1), transparent 40%);
+  transform: translate(-50%, -50%);
+  animation: spin 20s linear infinite;
+  z-index: 0;
+}
+
+@keyframes spin {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* --- UPDATED Form Container Styling --- */
+.form-container {
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 2.5rem;
+  width: 100%; /* Take up full width of its column */
+  max-width: 450px; /* But don't get wider than 450px */
+  margin: auto; /* This helps with centering */
+  backdrop-filter: blur(10px);
+}
+
+.form-control-modern {
+  background-color: #1e293b !important;
+  border: 1px solid #334155 !important;
+  color: var(--text-primary) !important;
+  border-radius: 8px !important;
+  padding: 0.75rem 1rem !important;
+}
