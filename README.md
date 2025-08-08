@@ -105,7 +105,9 @@ JWT_SECRET=your_jwt_secret
 
 ## ✨ Screenshots
 
-> Add screenshots/gifs of your dashboard, login, book pages, etc. here for a visual touch.
+> <img width="1431" height="1080" alt="1st" src="https://github.com/user-attachments/assets/ee7c93e6-c0aa-4924-90e7-f334c94bcfe1" />
+> <img width="1310" height="808" alt="register" src="https://github.com/user-attachments/assets/fd01f011-c73f-42f8-8c55-f7a408164df9" />
+
 
 ---
 
